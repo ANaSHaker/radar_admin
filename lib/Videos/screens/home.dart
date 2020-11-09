@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:pubg_admin/Videos/models/post.dart';
 import 'package:pubg_admin/Videos/screens/viewPost.dart';
+import '../../main.dart';
 import '../../webView.dart';
 import 'add_post.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
@@ -38,7 +39,10 @@ class _HomeVideoState extends State<HomeVideo> {
 actions: [
         Image.asset("assets/logo.png",color: Colors.white,),
         ],
+    leading: IconButton(icon:Icon(Icons.arrow_back),onPressed: (){
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
 
+    },),
       ),
 
       body: Container(

@@ -20,13 +20,8 @@ class _EditPostState extends State<EditPost> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff4E008A),
-        title:Text("تعديل الخبر",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize:24),),
-        centerTitle: true,
-
-        actions: [
-          Image.asset("assets/logo.png",color: Colors.white,),
-        ],
+        title: Text("تعديل الخبر"),
+        elevation: 0.0,
       ),
       body: Form(
           key: formkey,
@@ -37,7 +32,7 @@ class _EditPostState extends State<EditPost> {
                 child: TextFormField(
                   initialValue: widget.post.title,
                   decoration: InputDecoration(
-                      labelText: "Post tilte",
+                      labelText: "Post title",
                       border: OutlineInputBorder()
                   ),
                   onSaved: (val) => widget.post.title = val,

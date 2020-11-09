@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:pubg_admin/news/db/PostService.dart';
 import 'package:pubg_admin/news/models/post.dart';
-import '../db/PostService.dart';
+import 'package:pubg_admin/news/screens/edit_post.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
-import 'edit_post.dart';
 
 class PostView extends StatefulWidget {
   final Post post;

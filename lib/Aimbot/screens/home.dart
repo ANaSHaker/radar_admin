@@ -1,5 +1,6 @@
 import 'package:pubg_admin/Aimbot/models/post.dart';
 import 'package:flutter/material.dart';
+import '../../main.dart';
 import 'add_post.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -36,7 +37,10 @@ class _HomeAimbotState extends State<HomeAimbot> {
 actions: [
          Image.asset("assets/logo.png",color: Colors.white,),
         ],
+        leading: IconButton(icon:Icon(Icons.arrow_back),onPressed: (){
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomePage()));
 
+        },),
       ),
 
       body: Container(
